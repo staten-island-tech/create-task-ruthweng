@@ -1,3 +1,5 @@
+import "./style.css";
+import { DOMselectors } from "./dom";
 
 const API = "https://api.quotable.io/quotes";
 
