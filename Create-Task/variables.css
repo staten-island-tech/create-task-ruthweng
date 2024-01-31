@@ -1,0 +1,27 @@
+:root {
+    --color: rgba(54, 78, 174, 0.8);
+    --black: rgba(0, 0, 0, 0.6);
+    --white: #ffffff;
+
+    /* text size */
+    --h1: 10rem;
+    --h2: 9rem;
+    --h3: 5rem;
+    --h5: 3rem;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h5 {
+    font-size: var(--h5);
+}

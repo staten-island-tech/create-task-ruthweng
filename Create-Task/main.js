@@ -11,7 +11,7 @@ async function getData(API) {
 
         const data = await response.json();
         console.log(data);
-        createCard(data.data);
+        createCard(data.results);
     } catch (error) {
         console.error(error);
         errorMessage('Error 404: Youre done');
@@ -19,3 +19,30 @@ async function getData(API) {
 }
 
 getData(API);
+
+function createCard(arr) {
+    arr.forEach((item) => {
+        DOMselectors.container.insertAdjacentHTML("beforeend", 
+        `
+        <div class="card">
+            <h2 class="name">${item.author}</h2>
+            <h5 class="description">${item.content}</h5>
+        </div>`
+        );
+    });
+}
+
+function clearCards() {
+    DOMselectors.container.innerHTML = '';
+}
+
+function errorMessage(message) {
+    alert(message);
+}
+
+DOMselectors.form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    findMaps(DOMselectors.input.value);
+    DOMselectors.input.value = "";
+    clear();
+  });
