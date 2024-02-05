@@ -27,7 +27,7 @@ function createCard(arr) {
         DOMselectors.container.insertAdjacentHTML("beforeend", 
         `
         <div class="card">
-            <h2 class="name">${item.author}</h2>
+         
             <h5 class="description">${item.content}</h5>
         </div>`
         );
@@ -48,3 +48,5 @@ DOMselectors.form.addEventListener("submit", async function (event) {
     DOMselectors.input.value = "";
     clear();
   });
+
+  /* <h2 class="name">${item.author}</h2> */
